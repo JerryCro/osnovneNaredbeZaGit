@@ -1,0 +1,51 @@
+Defaultne postavke od kuda Git Bash/CMD kreće je c:/user(navizv usera). To je početna točka od kuda možeš pristupiti svim folderima na svom useru.
+
+Kako bi ušli u neki od foldera koristimo naredbu:
+
+    cd nazivFoldera - i tako redom ako imamo pod foldere u koje hoćemo ući
+    cd .. - je naredba za izlazak iz foldera jedamput u nazad
+    cd - ako smo ušli u više foldera i hoćemo se vratiti na početak onda koristimo samo cd, na taj način izlazimo iz svih foldera
+
+
+
+Ako hoćeš napraviti folder jer ga nisi napravio prije i hoćeš klonirati nečije podatke:
+
+    mkdir newFolder - ovako napraviš folder na c:\user
+
+    cd newFolder - ovako uđeš u taj folder
+
+    git clone https:/link sa githuba - ovako kloniraš podatke sa githuba
+
+
+
+Možeš samo klonirati bez izrade foldera i onda će se na c:\user kreirati folder pod nazivom tog repositotya kojeg kloniraš.
+Što znači da direktno kotistiš
+
+    git clone https:/link sa githuba - ovako kloniraš podatke sa githuba
+
+
+
+Ako ti hoćeš staviti svoje podatke na github
+
+
+    cd tvojFoleder - uđeš u folder iz kojega hoćeš file prebaciti na github
+    git add . - pripremiš podatke
+    git commit -m "Add existing file" - dodaš opis 
+    git push origin main - i staviš ih na github
+
+
+
+Ako hoćeš povući nove podadatke koji su stavljeni u taj isti repository koji si klonirao, npr nakon novog predavanja.
+(radi se o tome da će tu biti hrpa fileova s vremenom) onda ćeš:
+
+    cd tvojFolder - ući u taj folder gdje skidaš sve te fileove
+    git pull - povući samo one fileove koje do sada nisi imao
+
+
+
+Ako si nešto radio lokalno i više ne znaš jesi li to stavio na github ili si zaboravio, ili šta god, uglavnom hoćeš vidjeti što je 
+različito u odnosu na podatke na github-u:
+
+    cd tvojFolder - uđeš u taj folder gdje spremaš sve svoje podatke
+    git status - pogledaš status dali su sve promjene poslane na github
+
